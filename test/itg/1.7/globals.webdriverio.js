@@ -18,6 +18,7 @@ global.selenium_url = argv.SELENIUM;
 global._projectdir = path.join(__dirname, '..', '..');
 global.product_id = new Date().getTime();
 global.new_customer_email = 'pub' + date_time + '@prestashop.com';
+global.new_employee_email = 'demo' + date_time + '@prestashop.com';
 
 module.exports = {
     selector: {
@@ -60,6 +61,22 @@ module.exports = {
                 login_input: '#email',
                 password_input: '#passwd',
                 login_button: '[name="submitLogin"]'
+            },
+            //Employee selector
+            EmployeePage:{
+                menu: '#nav-sidebar',
+                advanced_parameters: '#subtab-AdminAdvancedParameters',
+                employees_subtab: '#subtab-AdminParentEmployees',
+                new_employee_button: '#page-header-desc-employee-new_employee',
+                form_team: '#form-employee',
+                form_employee: '#employee_form',
+                employee_name_input: '#firstname',
+                employee_lastname_input: '#lastname',
+                employee_email_input: '#email',
+                employee_password_input: '#passwd',
+                employee_profile_input: '#id_profile',
+                employee_save_button: '#employee_form_submit_btn',
+                employee_success: '.alert.alert-success'
             },
             //Product selector
             AddProductPage:{
